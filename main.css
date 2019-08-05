@@ -45,6 +45,10 @@ h1 strong {
   letter-spacing: 4px;
 }
 
+h2 {
+  font-family: 'Bitter', serif;
+}
+
 #content-container {
   background-color: #0ce9ff;
   width: 40%;
@@ -56,20 +60,45 @@ h1 strong {
   right: 00px;
 }
 
-#content-container.contact {
+#content-container a:link, #content-container a:visited {
+  text-decoration: none;
+  font-weight: 400;
+  color: rgba(0,0,0,0.65);
+  transition: all .3s linear;
+}
+
+#content-container a:hover {
+  color: #000;
+  /*border-bottom: 1px solid rgba(0,0,0,0.25);*/
+}
+
+#content-container.contact, 
+nav ul li a#goTo-contact:hover,
+nav ul li a#goTo-contact.active {
   background-color: #ffd60c;
 }
 
-#content-container.about {
+#content-container.about, 
+nav ul li a#goTo-about:hover,
+nav ul li a#goTo-about.active {
   background-color: #0ce9ff;
 }
 
-#content-container.talks {
+#content-container.talks, 
+nav ul li a#goTo-talks:hover,
+nav ul li a#goTo-talks.active {
   background-color: #f19efb;
 }
 
-#content-container.lessons {
+#content-container.lessons, 
+nav ul li a#goTo-lessons:hover,
+nav ul li a#goTo-lessons.active {
   background-color: #ff6060;
+}
+
+nav ul li a#goTo-resume:hover,
+nav ul li a#goTo-resume.active {
+  background-color: #60ffa0;
 }
 
 
@@ -83,11 +112,33 @@ ol {
 }
 
 ol li {
-  color: #666;
-  font-family: 'Bitter', serif;
   margin: 0;
   padding: 10px 0;
-  text-align: justify;
+  font-weight: 200;
+}
+
+#contact ol, #talks ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0;
+}
+
+#contact ol li, #talks ol li {
+  margin: 15px 0;
+  padding: 0;
+}
+
+#contact ol li i, #talks ol i {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+#talks ol li p {
+  margin: 0 23px;
+  font-size: 0.8em;
+  display: block;
+  color: #820092;
 }
 
 nav {
@@ -107,7 +158,9 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
+  transition: background-color 0.3s linear;
   text-transform: uppercase;
+  text-shadow: 0px 0px 3px rgba(0,0,0,0.5);
   color: #fff;
   display: inline-block;
   padding: 3px 8px;
@@ -136,30 +189,6 @@ h2 {
   /*background: repeating-linear-gradient(45deg,   #ffd78f,   #f9d189 0px,   #ffd78f 1px,   #ffd78f 5px);*/
 }
 
-h4 {
-  font-size: 0.8em;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  font-family: 'Crimson Text', serif;
-  font-family: 'Bitter', serif;
-}
-
-.dates {
-  color: #f5ae2d;
-  display: inline-block;
-  margin: 0 5px;
-  font-weight: 700;
-}
-
-h3 {
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-  font-size: 0.9em;
-  text-transform: uppercase;
-}
 
 section ul {
   list-style-type: none;
