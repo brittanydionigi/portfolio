@@ -11,11 +11,11 @@
   <body>
     <nav>
       <ul>
-        <li><a href="http://brittanystoroz.com">About</a></li>
+        <li><a id="goTo-about" class="go-to" href="#">About</a></li>
+        <li><a id="goTo-talks" href="#" class="go-to" >Talks</a></li>
+        <li><a id="goTo-lessons" href="#" class="go-to" >Lessons</a></li>
         <li><a href="./resume.pdf" target="_blank">Resume</a></li>
-        <li><a href="#">Talks</a></li>
-        <li><a href="#">Lessons</a></li>
-        <li><a href="#">Contact</a></li>
+        <li id="goTo-contact" class="go-to" ><a href="#">Contact</a></li>
       </ul>
     </nav>
     <header>
@@ -24,14 +24,69 @@
     </header>
 
 
-    <section id="content-container">
-      <p>b·​stor·​oz  |  noun</p>
+    <section id="content-container" class="scale-up-ver-bottom about">
+      <div class="section-container" id="about">
+        <h2>b·​stor·​oz  |  noun</h2>
 
-      <ol>
-        <li>An experienced software engineer, passionate about the open web and engaging with the community through teaching, writing, and speaking at conferences</li>
-        <li>A mentor focused on teaching front-end development to new engineers and helping experienced developers continue to advance their professional skills</li>
-      </ol>
+        <ol>
+          <li>An experienced software engineer, passionate about the open web and engaging with the community through teaching, writing, and speaking at conferences</li>
+          <li>A mentor focused on teaching front-end development to new engineers and helping experienced developers continue to advance their professional skills</li>
+        </ol>
+      </div>
+
+      <div class="section-container" id="talks">
+        <h2>let me tell you about...</h2>
+
+        <ol>
+          <li><a href="https://www.youtube.com/watch?v=fQHH6aSpYV0">A Year of Other's Bugs: The Sad State of Error Handling</a></li>
+          <li><a href="https://www.youtube.com/watch?v=J6vPwvFdUiE">Building Custom Apps with Ember CLI</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ohF_exBsQYQ">Extending DevTools for Custom Debugging</a></li>
+          <li><a href="http://brittanystoroz.github.io/presentations/service-workers/index.html#/">Understanding Service Workers</a></li>
+        </ol>
+      </div>
+
+      <div class="section-container" id="lessons">
+        <h2>learn about</h2>
+
+        <ol>
+          <li><a href="https://www.youtube.com/watch?v=fQHH6aSpYV0">A Year of Other's Bugs: The Sad State of Error Handling</a></li>
+          <li><a href="https://www.youtube.com/watch?v=J6vPwvFdUiE">Building Custom Apps with Ember CLI</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ohF_exBsQYQ">Extending DevTools for Custom Debugging</a></li>
+          <li><a href="http://brittanystoroz.github.io/presentations/service-workers/index.html#/">Understanding Service Workers</a></li>
+        </ol>
+      </div>
+
+
+      <div class="section-container" id="contact">
+        <h2>get in touch</h2>
+
+        <ol>
+          <li><a href="https://twitter.com/brittanystoroz">twitter</a></li>
+          <li><a href="https://github.com/brittanystoroz">github</li>
+          <li><a href="https://www.linkedin.com/in/brittanystoroz/">linkedin</li>
+          <li>brittanystoroz@gmail.com</li>
+        </ol>
+      </div>
   </section>
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript">
+    let contentContainer;
+    $('.go-to').click(function(event) {
+      let sectionIds = 'about contact talks lessons';
+      let sectionId = $(this).attr('id').split('-')[1];
+      $('.section-container').hide();
+      $(`#${sectionId}`).show();
+
+      contentContainer = $('#content-container').detach();
+      contentContainer.appendTo('body').removeClass(sectionIds).addClass(sectionId);
+    });
+  </script>
 
   </body>
 </html>
