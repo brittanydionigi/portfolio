@@ -1,22 +1,20 @@
 <!doctype>
-<html>
+<html lang="en">
   <head>
     <title>Brittany Storoz - Software Engineer, Educator & Mentor</title>
     <link rel="stylesheet" type="text/css" href="./main.css" />
     <link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   </head>
   <body>
     <nav>
       <ul>
-        <li><a id="goTo-about" class="go-to" href="#about">About</a></li>
-        <li><a id="goTo-talks" href="#talks" class="go-to">Talks</a></li>
-        <li><a id="goTo-lessons" href="#lessons" class="go-to">Lessons</a></li>
-        <li><a id="goTo-resume" href="./resume.pdf" target="_blank">Resume</a></li>
-        <li><a id="goTo-contact" class="go-to" href="#contact">Contact</a></li>
+        <li><a href="#about" id="goTo-about" class="go-to">About</a></li>
+        <li><a href="#talks" id="goTo-talks" class="go-to">Talks</a></li>
+        <li><a href="#lessons" id="goTo-lessons" class="go-to">Lessons</a></li>
+        <li><a href="./resume.pdf" id="goTo-resume" target="_blank">Resume</a></li>
+        <li><a href="#contact" id="goTo-contact" class="go-to" >Contact</a></li>
       </ul>
     </nav>
     <header>
@@ -25,7 +23,7 @@
     </header>
 
 
-    <section id="content-container" class="scale-up-ver-bottom about">
+    <section id="content-container" class="scale-up about">
       <div class="section-container" id="about">
         <h2>b·​stor·​oz  |  noun</h2>
 
@@ -38,7 +36,7 @@
       <div class="section-container" id="talks">
         <h2>let me tell you about...</h2>
 
-        <ol>
+        <ul>
           <li><a href="https://www.youtube.com/watch?v=fQHH6aSpYV0" target="_blank"><i class="fas fa-video"></i> A Year of Other's Bugs: The State of Error Handling
             <p>JSConfAU [ 03.2018 ]</p>
           </a></li>
@@ -48,43 +46,43 @@
             <p>LXJS [ 03.2014 ]</p></a></li>
           <li><a href="http://brittanystoroz.github.io/presentations/service-workers/index.html#/" target="_blank"><i class="fas fa-file-powerpoint"></i> Understanding Service Workers
             <p>Mozilla Work Week [ 03.2015 ]</p></a></li>
-        </ol>
+        </ul>
       </div>
 
       <div class="section-container" id="lessons">
         <h2>learn about</h2>
 
-        <ol>
+        <ul>
           <li><a href="https://www.youtube.com/watch?v=fQHH6aSpYV0">A Year of Other's Bugs: The Sad State of Error Handling</a></li>
           <li><a href="https://www.youtube.com/watch?v=J6vPwvFdUiE">Building Custom Apps with Ember CLI</a></li>
           <li><a href="https://www.youtube.com/watch?v=ohF_exBsQYQ">Extending DevTools for Custom Debugging</a></li>
           <li><a href="http://brittanystoroz.github.io/presentations/service-workers/index.html#/">Understanding Service Workers</a></li>
-        </ol>
+        </ul>
       </div>
 
 
       <div class="section-container" id="contact">
         <h2>get in touch</h2>
 
-        <ol>
+        <ul>
           <li><a href="https://twitter.com/brittanystoroz"><i class="fab fa-twitter"></i> twitter/brittanystoroz</a></li>
           <li><a href="https://github.com/brittanystoroz"><i class="fab fa-github"></i> github/brittanystoroz</li>
           <li><a href="https://www.linkedin.com/in/brittanystoroz/"><i class="fab fa-linkedin-in"></i> linkedin/brittanystoroz</li>
           <li><a href="#"><i class="fas fa-envelope-open-text"></i> brittanystoroz@gmail.com</a></li>
-        </ol>
+        </ul>
       </div>
   </section>
 
   <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
 
 
   <script type="text/javascript">
     $(document).ready(function() {
 
-      let sectionName = window.location.hash.substring(1);
+      let sectionName = window.location.hash.substring(1) || 'about';
       activateContentArea(sectionName);
 
       function activateContentArea(sectionName) {

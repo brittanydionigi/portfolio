@@ -1,7 +1,4 @@
-html { 
-  height: 100%;
-  position: relative;
-}
+html { height: 100%; position: relative; }
 
 body {
   background-color: #222;
@@ -11,7 +8,6 @@ body {
   position: relative;
   box-sizing: border-box;
 }
-
 
 header {
   width: 70%;
@@ -23,132 +19,12 @@ header {
   display: flex;
   align-items: center;
   z-index: 10;
-/*  border-right: 1px solid #e9e9e9;
-  border-left: 1px solid #e9e9e9;*/
-}
-
-hr { height: 1px; width: 100%; background-color: #eee; border: 0px solid #eee; margin: 20% auto; }
-
-.right { display: block; text-align: right; }
-
-h1 {
-  color: #ddd;
-  line-height: 0.8em;
-  font-size: 3em;
-  font-weight: 100;
-  margin: -55px 0 0 0;
-  height: 20px;
-  padding: 0;
-}
-
-h1 strong {
-  letter-spacing: 4px;
-}
-
-h2 {
-  font-family: 'Bitter', serif;
-}
-
-#content-container {
-  background-color: #0ce9ff;
-  width: 40%;
-  position: absolute;
-  top: -40px;
-  box-sizing: border-box;
-  left: 30%;
-  z-index: 20;
-  right: 00px;
-}
-
-#content-container a:link, #content-container a:visited {
-  text-decoration: none;
-  font-weight: 400;
-  color: rgba(0,0,0,0.65);
-  transition: all .3s linear;
-}
-
-#content-container a:hover {
-  color: #000;
-  /*border-bottom: 1px solid rgba(0,0,0,0.25);*/
-}
-
-#content-container.contact, 
-nav ul li a#goTo-contact:hover,
-nav ul li a#goTo-contact.active {
-  background-color: #ffd60c;
-}
-
-#content-container.about, 
-nav ul li a#goTo-about:hover,
-nav ul li a#goTo-about.active {
-  background-color: #0ce9ff;
-}
-
-#content-container.talks, 
-nav ul li a#goTo-talks:hover,
-nav ul li a#goTo-talks.active {
-  background-color: #f19efb;
-}
-
-#content-container.lessons, 
-nav ul li a#goTo-lessons:hover,
-nav ul li a#goTo-lessons.active {
-  background-color: #ff6060;
-}
-
-nav ul li a#goTo-resume:hover,
-nav ul li a#goTo-resume.active {
-  background-color: #60ffa0;
-}
-
-
-.scale-up-ver-bottom {
-  -webkit-animation: scale-up-ver-bottom 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-          animation: scale-up-ver-bottom 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-ol {
-  padding: 0px 18px;
-}
-
-ol li {
-  margin: 0;
-  padding: 10px 0;
-  font-weight: 200;
-}
-
-#contact ol, #talks ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 20px 0;
-}
-
-#contact ol li, #talks ol li {
-  margin: 15px 0;
-  padding: 0;
-}
-
-#contact ol li i, #talks ol i {
-  display: inline-block;
-  width: 20px;
-  text-align: center;
-}
-
-#talks ol li p {
-  margin: 0 23px;
-  font-size: 0.8em;
-  display: block;
-  color: #820092;
 }
 
 nav {
   position: absolute;
   top: -50px;
   left: 155px;
-}
-
-nav ul {
-/*  margin: 35px 0 10px 0;*/
 }
 
 nav ul li {
@@ -167,42 +43,71 @@ nav ul li a {
   font-weight: 900;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 50% 15% 35%;
-  grid-template-rows: 1fr;
-  grid-template-areas: ". .";
-  height: 100%;
+hr { height: 1px; width: 100%; background-color: #eee; border: 0px solid #eee; margin: 20% auto; }
+
+h1 {
+  color: #ddd;
+  line-height: 0.8em;
+  font-size: 3em;
+  font-weight: 100;
+  margin: -55px 0 0 0;
+  height: 20px;
+  padding: 0;
 }
 
-section { 
-  background-color: #fff;
-  margin: 0 auto;
-  padding: 50px 60px;
-}
-
-
+h1 strong { letter-spacing: 4px; }
 
 h2 {
   margin: 0 0 15px 0;
   font-weight: 100;
-  /*background: repeating-linear-gradient(45deg,   #ffd78f,   #f9d189 0px,   #ffd78f 1px,   #ffd78f 5px);*/
+  font-family: 'Bitter', serif;
 }
 
-
-section ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+#content-container {
+  background-color: #0ce9ff;
+  width: 40%;
+  position: absolute;
+  top: -40px;
+  box-sizing: border-box;
+  left: 30%;
+  z-index: 20;
+  right: 0px;
+  margin: 0 auto;
+  padding: 50px 60px;
+  -webkit-animation: scale-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: scale-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-section ul li {
-  padding: 5px 0px;
+#content-container a:link, #content-container a:visited {
+  text-decoration: none;
+  font-weight: 400;
+  color: rgba(0,0,0,0.65);
+  transition: all .3s linear;
 }
 
+#content-container a:hover { color: #000; }
 
-#contact, #talks, #lessons {
-  display: none;
+
+/* Colors for Section Content */
+
+#content-container.about, #goTo-about:hover, #goTo-about.active {
+  background-color: #0ce9ff;
+}
+
+#content-container.talks, #goTo-talks:hover, #goTo-talks.active {
+  background-color: #f19efb;
+}
+
+#content-container.lessons, #goTo-lessons:hover, #goTo-lessons.active {
+  background-color: #ff6060;
+}
+
+#goTo-resume:hover, #goTo-resume.active {
+  background-color: #60ffa0;
+}
+
+#content-container.contact, #goTo-contact:hover, #goTo-contact.active {
+  background-color: #ffd60c;
 }
 
 .section-container {
@@ -210,18 +115,43 @@ section ul li {
           animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) .3s both;
 }
 
+.section-container ol {
+  list-style-type: decimal-leading-zero;
+  padding: 0;
+}
 
-/* ----------------------------------------------
- * Generated by Animista on 2019-8-5 9:35:8
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
+.section-container ol li {
+  margin-left: 25px;
+  padding: 10px;
+}
 
-/**
- * ----------------------------------------
- * animation scale-up-ver-bottom
- * ----------------------------------------
- */
-@-webkit-keyframes scale-up-ver-bottom {
+.section-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.section-container ul li {
+  margin: 15px 0;
+  padding: 0;
+  font-weight: 200;
+}
+
+i {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+#talks p {
+  margin: 0 23px;
+  font-size: 0.8em;
+  display: block;
+  color: #820092;
+}
+
+
+@-webkit-keyframes scale-up {
   0% {
     -webkit-transform: scaleY(0.1);
             transform: scaleY(0.1);
@@ -235,7 +165,8 @@ section ul li {
             transform-origin: 0% 100%;
   }
 }
-@keyframes scale-up-ver-bottom {
+
+@keyframes scale-up {
   0% {
     -webkit-transform: scaleY(0.1);
             transform: scaleY(0.1);
@@ -251,30 +182,12 @@ section ul li {
 }
 
 
-
-/* ----------------------------------------------
- * Generated by Animista on 2019-8-5 10:8:7
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation fade-in
- * ----------------------------------------
- */
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+@-webkit-keyframes fade-in { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
+
 @keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
