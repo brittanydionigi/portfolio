@@ -1,31 +1,42 @@
-html { height: 100%; position: relative; }
-
+html,
 body {
   background-color: #222;
   font-family: 'Heebo', sans-serif;
-  margin: 0 auto;
   height: 100%;
+  width: 100%;
+}
+
+.container {
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: row;
+  height: 75%;
   position: relative;
-  box-sizing: border-box;
+  width: 70%;
 }
 
 header {
-  width: 70%;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
   box-sizing: border-box;
-  margin: 15% auto;
-  position: relative;  
+  height: 30%;
+  width: 100%;
+  position: absolute;
+  bottom: 10%;  
   display: flex;
   align-items: center;
-  z-index: 10;
+  z-index: 1;
 }
 
 nav {
-  position: absolute;
-  top: -50px;
-  left: 155px;
+  width: 60%;
+  border-bottom: 1px solid #eee;
+  left: 0;
+  padding: 0 0 10px 0;
 }
+
+nav ul { margin: 0; padding: 0; }
 
 nav ul li {
   display: inline-block;
@@ -65,13 +76,13 @@ h2 {
 
 #content-container {
   background-color: #0ce9ff;
-  width: 40%;
-  position: absolute;
-  top: -40px;
+  width: 50%;
+  min-height: 500px;
   box-sizing: border-box;
-  left: 30%;
+  right: 0;
+  position: relative;
+  bottom: -50px;
   z-index: 20;
-  right: 0px;
   margin: 0 auto;
   padding: 50px 60px;
   -webkit-animation: scale-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
