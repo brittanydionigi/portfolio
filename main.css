@@ -76,7 +76,7 @@ h2 {
 
 #content-container {
   background-color: #0ce9ff;
-  width: 50%;
+  width: 65%;
   min-height: 500px;
   box-sizing: border-box;
   right: 0;
@@ -155,10 +155,15 @@ i {
 }
 
 #talks p {
-  margin: 0 23px;
-  font-size: 0.8em;
-  display: block;
+  text-indent: -25px;
+  padding: 0 0 0 35px;
+}
+
+#talks span.event-date {
   color: #820092;
+  font-size: 0.8em;
+  text-indent: 0;
+  display: block;
 }
 
 
