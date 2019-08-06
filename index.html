@@ -12,7 +12,7 @@
   <body>
     <nav>
       <ul>
-        <li><a id="goTo-about" class="go-to active" href="#about">About</a></li>
+        <li><a id="goTo-about" class="go-to" href="#about">About</a></li>
         <li><a id="goTo-talks" href="#talks" class="go-to">Talks</a></li>
         <li><a id="goTo-lessons" href="#lessons" class="go-to">Lessons</a></li>
         <li><a id="goTo-resume" href="./resume.pdf" target="_blank">Resume</a></li>
@@ -82,17 +82,31 @@
 
 
   <script type="text/javascript">
-    let contentContainer;
-    $('.go-to').click(function(event) {
-      $('.go-to').removeClass('active');
-      $(this).addClass('active');
-      let sectionIds = 'about contact talks lessons';
-      let sectionId = $(this).attr('id').split('-')[1];
-      $('.section-container').hide();
-      $(`#${sectionId}`).show();
+    $(document).ready(function() {
 
-      contentContainer = $('#content-container').detach();
-      contentContainer.appendTo('body').removeClass(sectionIds).addClass(sectionId);
+      let sectionName = window.location.hash.substring(1);
+      activateContentArea(sectionName);
+
+      function activateContentArea(sectionName) {
+        $('.go-to').removeClass('active');
+        $(`#goTo-${sectionName}`).addClass('active');
+
+        let sectionIds = 'about contact talks lessons';
+        $('.section-container').hide();
+        $(`#${sectionName}`).show();
+
+        let contentContainer = $('#content-container').detach();
+        contentContainer.appendTo('body').removeClass(sectionIds).addClass(sectionName);
+      }
+
+      $('.go-to').click(function(event) {
+        event.preventDefault();
+
+        let sectionName = $(this).attr("href");
+        window.location = sectionName;
+
+        activateContentArea(sectionName.substring(1));
+      });
     });
   </script>
 
