@@ -98,6 +98,7 @@ h2 {
 
 #content-container a:hover { color: #000; }
 
+#content-container p.description { font-size: 0.8em; text-indent: 0; margin: 15px 0; padding: 0; }
 
 /* Colors for Section Content */
 
