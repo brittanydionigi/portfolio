@@ -276,10 +276,10 @@ i {
 
 
 @media only screen and (max-width : 500px) {
+  .container { width: 90%; }
   nav { font-size: 0.7em; }
-  
   #content-container {
-    padding: 15px 25px;
+    padding: 25px 20px;
   }
 }
 
